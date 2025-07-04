@@ -31,7 +31,7 @@ app.post('/my-qr', (req: Request, res: Response) => {
 })
 
 app.post('/decode-khqr', (req: Request, res: Response) => {
-    const qr = req.body.qrString || ""
+    const qr = req.body.qrCode || ""
     const data = service.decodeKHQR(qr);
     res.json(data)
 })
